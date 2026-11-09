@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Produto {
+  id                Int      @id @default(autoincrement())
+  nome              String   @db.NVarChar(150)
+  codigo            String   @unique @db.NVarChar(50)
+  preco             Decimal  @db.Decimal(10, 2)
+  descricao         String   @db.NVarChar(500)
+  quantidadeEstoque Int
+  avaliacao         Decimal  @db.Decimal(2, 1)
+  categoria         String   @db.NVarChar(80)
+  imagem            String?  @db.NVarChar(500)
+  criadoEm          DateTime @default(now())
+
+  @@index([categoria])
+  @@map("Produtos")
+}

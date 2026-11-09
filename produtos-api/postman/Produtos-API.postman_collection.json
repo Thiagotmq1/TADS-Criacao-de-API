@@ -1,0 +1,321 @@
+{
+  "info": {
+    "name": "Produtos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "POST 1 - criar produto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Mouse Logitech\",\n  \"codigo\": \"MS-010\",\n  \"preco\": 129.9,\n  \"descricao\": \"Mouse sem fio\",\n  \"quantidadeEstoque\": 30,\n  \"avaliacao\": 4.6,\n  \"categoria\": \"Perifericos\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST 2 - criar produto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Teclado Mecanico\",\n  \"codigo\": \"TC-011\",\n  \"preco\": 249.9,\n  \"descricao\": \"Teclado ABNT2 switch azul\",\n  \"quantidadeEstoque\": 20,\n  \"avaliacao\": 4.4,\n  \"categoria\": \"Perifericos\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET 1 - listar todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET 2 - listar todos (apos alteracoes)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET codigo 1 - MS-010",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/MS-010",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "MS-010"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET codigo 2 - codigo pessoal",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/854377",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "854377"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET categoria 1 - Perifericos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/categoria/Perifericos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "categoria",
+            "Perifericos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET categoria 2 - Eletronicos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/categoria/Eletronicos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "categoria",
+            "Eletronicos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT 1 - substituir MS-010",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Mouse Logitech MX\",\n  \"codigo\": \"MS-010\",\n  \"preco\": 159.9,\n  \"descricao\": \"Mouse sem fio ergonomico\",\n  \"quantidadeEstoque\": 25,\n  \"avaliacao\": 4.8,\n  \"categoria\": \"Perifericos\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos/MS-010",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "MS-010"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT 2 - substituir TC-011",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Teclado Mecanico RGB\",\n  \"codigo\": \"TC-011\",\n  \"preco\": 299.9,\n  \"descricao\": \"Teclado ABNT2 RGB\",\n  \"quantidadeEstoque\": 18,\n  \"avaliacao\": 4.5,\n  \"categoria\": \"Perifericos\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos/TC-011",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "TC-011"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PATCH 1 - preco de MS-010",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"preco\": 149.9\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos/MS-010",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "MS-010"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PATCH 2 - estoque de TC-011",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantidadeEstoque\": 12\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/produtos/TC-011",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "TC-011"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DELETE 1 - MS-010",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/MS-010",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "MS-010"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DELETE 2 - TC-011",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/TC-011",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "TC-011"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET apos DELETE - 404 esperado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/produtos/MS-010",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "produtos",
+            "MS-010"
+          ]
+        }
+      }
+    }
+  ]
+}

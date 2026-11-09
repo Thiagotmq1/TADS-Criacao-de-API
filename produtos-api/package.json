@@ -1,0 +1,25 @@
+{
+  "name": "produtos-api",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "db:push": "prisma db push",
+    "db:seed": "node prisma/seed.js",
+    "generate": "prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "API de produtos (Node.js + Express + Prisma + SQL Server Express)",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^18.0.9",
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  }
+}

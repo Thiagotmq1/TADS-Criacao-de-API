@@ -1,0 +1,20 @@
+body { background: #f8f9fa; }
+.logo { background: #e0e0e0; padding: .4rem 1.2rem; font-weight: 700; border-radius: 4px; }
+.secao { font-size: 1.15rem; font-weight: 700; border-bottom: 2px solid #333; padding-bottom: .25rem; margin: 1.5rem 0 1rem; }
+#creditos { background: #fff; border-top: 1px solid #dee2e6; margin-top: 2rem; }
+
+/* Destaque (carrossel) */
+.destaque { background: #bfe3ff; padding: 1rem; border-radius: 6px; }
+.destaque .carousel-item img { height: 320px; object-fit: cover; border-radius: 4px; }
+.destaque .carousel-caption { background: rgba(0, 0, 0, .55); border-radius: 4px; left: 12%; right: 12%; bottom: 1rem; padding: .5rem; }
+
+/* Cards de produto */
+.card-produto { transition: box-shadow .15s, transform .15s; }
+.card-produto:hover { box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15); transform: translateY(-2px); }
+.card-produto img { height: 180px; object-fit: cover; }
+.card-produto .nome { font-weight: 700; border-bottom: 4px solid #777; padding-bottom: .2rem; }
+.preco { color: #198754; font-weight: 700; font-size: 1.15rem; }
+
+/* Detalhes */
+.detalhe-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 6px; background: #e9ecef; }
+.estrelas { color: #f5a623; letter-spacing: 2px; }
